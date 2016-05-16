@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Piano</string>
+    <string name="metro">metro</string>
+    <string name="rec">rec</string>
+    <string name="stop">stop</string>
+    <string name="share">share</string>
+    <string name="shareButt">share</string>
+</resources>
