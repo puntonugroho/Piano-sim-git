@@ -7,13 +7,18 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 /**
  * Created by ASUS on 5/15/2016.
  */
 public class Piano extends View {
+    TextView coba = (TextView)findViewById(R.id.piano_textView);
     public Piano(Context context){
         super(context);
     }
@@ -110,4 +115,17 @@ public class Piano extends View {
             }
             }
         }
+    public boolean onTouchEvent(MotionEvent event){
+        float x = event.getX();
+        float y = event.getY();
+
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+            if (x >= 70 && x < (70+whiteKey.getWidth()) && y >= 70 && y < (70+whiteKey.getHeight())){
+                coba.setText("TESSSSSSS");
+            }
+                break;
+        }
+        return false;
+    }
     };
